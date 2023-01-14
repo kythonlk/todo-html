@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do App</title>
+ <style>
+    nav {
+  background-color: #7289DA;
+  color: white;
+  padding: 16px;
+}
+
+#chat-interface {
+  margin: 16px;
+}
+
+#task-list {
+  background-color: #2C2F33;
+  color: white;
+  padding: 16px;
+}
+
+#task-list .task {
+  margin-bottom: 8px;
+}
+Create a JavaScript file that contains the logic for adding and removing tasks from the list.
+Copy code
+const taskInput = document.getElementById('task-input');
+const addTaskButton = document.getElementById('add-task-button');
+const taskList = document.getElementById('task-list');
+
+addTaskButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  const taskText = taskInput.value;
+  if (taskText === '') {
+    return;
+  }
+  const task = document.createElement('div');
+  task.classList.add('task');
+  task.innerHTML = taskText;
+  taskList.appendChild(task);
+  taskInput.value = '';
+});
+
+taskList.addEventListener('click', function(event) {
+  co
+
+ </style>
+</head>
+<body>
+  <nav>
+    <h1>To-Do App</h1>
+  </nav>
+  <div id="chat-interface">
+    <div id="task-list"></div>
+    <form>
+      <input type="text" id="task-input" placeholder="Enter a task...">
+      <button type="submit" id="add-task-button">Add Task</button>
+    </form>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
