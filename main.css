@@ -1,0 +1,19 @@
+nav {
+  background-color: #7289DA;
+  color: white;
+  padding: 16px;
+}
+
+#chat-interface {
+  margin: 16px;
+}
+
+#task-list {
+  background-color: #2C2F33;
+  color: white;
+  padding: 16px;
+}
+
+#task-list .task {
+  margin-bottom: 8px;
+}
