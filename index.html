@@ -1,22 +1,82 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>To-Do App</title>
-    <link rel="stylesheet" href="./main.css">
-    <link rel="script" href="./script.js">
-  </head>
-  <body>
-    <nav>
-      <h1>To-Do App</h1>
-    </nav>
-    <main>
-      <div id="chat-interface">
-        <div id="task-list"></div>
-        <form>
-          <input type="text" id="task-input" placeholder="Enter a task...">
-          <button type="submit" id="add-task-button">Add Task</button>
-        </form>
-      </div>
-    </main>
-  </body>
+<head>
+  <title>Todo List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+  .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .current-date,
+    .current-time {
+      font-weight: bold;
+    }
+    .year-select {
+      margin-bottom: 10px;
+    }
+    .month-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .month-boxes .month-box {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f2f2f2;
+      margin: 5px;
+      cursor: pointer;
+    }
+    .day-picker {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+    }
+    .day-picker .day {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div><p>Today : </p><div class="current-date" id="current-date"></div></div>
+    <div><p>Now : </p><div class="current-time" id="current-time"></div></div>
+  </div>
+  <h1>Todo List</h1>
+
+  <div class="year-select">
+    <select id="year-select"></select>
+  </div>
+
+<div class="month-boxes" id="month-boxes"></div>
+
+  <div class="day-picker" id="day-picker"></div>
+
+  <script src="./script.js"></script>
+</body>
 </html>
