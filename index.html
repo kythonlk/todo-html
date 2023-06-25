@@ -12,6 +12,15 @@
     h1 {
       color: #333;
     }
+  .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .current-date,
+    .current-time {
+      font-weight: bold;
+    }
     .year-select {
       margin-bottom: 10px;
     }
@@ -54,6 +63,10 @@
   </style>
 </head>
 <body>
+  <div class="header">
+    <div class="current-date" id="current-date"></div>
+    <div class="current-time" id="current-time"></div>
+  </div>
   <h1>Todo List</h1>
 
   <div class="year-select">
