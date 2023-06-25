@@ -65,3 +65,16 @@ window.addEventListener('load', function() {
   renderYearSelect();
   renderMonthBoxes(currentYear);
 });
+
+function updateDateTime() {
+  const currentDate = new Date().toLocaleDateString();
+  const currentTime = new Date().toLocaleTimeString();
+
+  document.getElementById('current-date').textContent = currentDate;
+  document.getElementById('current-time').textContent = currentTime;
+}
+
+window.addEventListener('load', function() {
+  updateDateTime();
+  setInterval(updateDateTime, 1000); // Update every second
+});
