@@ -4,7 +4,6 @@
 <head>
   <title>Todo List</title>
   <style>
-    /* Add some basic styles to make it visually appealing */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -13,6 +12,15 @@
     }
     h1 {
       color: #333;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .current-date,
+    .current-time {
+      font-weight: bold;
     }
     .task-list {
       list-style-type: none;
@@ -39,6 +47,10 @@
   </style>
 </head>
 <body>
+   <div class="header">
+      <div><p>Today : </p><div class="current-date" id="current-date"></div></div>
+      <div><p>Now : </p><div class="current-time" id="current-time"></div></div>
+    </div>
   <h1>Todo List</h1>
 
   <div class="date" id="date"></div>
