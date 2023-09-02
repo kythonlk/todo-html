@@ -78,3 +78,5 @@ window.addEventListener('load', function() {
   updateDateTime();
   setInterval(updateDateTime, 1000); // Update every second
 });
+
+console.log(current-time);
