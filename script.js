@@ -76,7 +76,7 @@ function updateDateTime() {
 
 window.addEventListener('load', function() {
   updateDateTime();
-  setInterval(updateDateTime, 1000); // Update every second
+  setInterval(updateDateTime, 1000);
 });
 
 console.log(current-time);
