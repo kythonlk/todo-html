@@ -41,15 +41,16 @@
       cursor: pointer;
     }
     .day-picker {
-      position: fixed;
+      /* position: fixed;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #f2f2f2;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-      z-index: 9999;
+      left: 50%; */
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      background-color: #dedede;
+      margin: 20px;
+      border-radius:15px;
     }
     .day-picker .day {
       display: inline-block;
@@ -58,7 +59,17 @@
       line-height: 30px;
       text-align: center;
       margin: 5px;
+      padding: 12px;
+      background-color: #fff;
       cursor: pointer;
+    }
+    #all-tasks{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      text-align: left;
+    }
+    .listH{
+      padding-inline: 20px;
     }
   </style>
 </head>
@@ -72,11 +83,11 @@
   <div class="year-select">
     <select id="year-select"></select>
   </div>
-
-<div class="month-boxes" id="month-boxes"></div>
+<script src="./home.js"></script>
+  <div class="month-boxes" id="month-boxes"></div>
 
   <div class="day-picker" id="day-picker"></div>
-
+  <div id="all-tasks"></div>
   <script src="./script.js"></script>
 </body>
 </html>
