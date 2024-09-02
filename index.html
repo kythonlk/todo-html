@@ -1,93 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Todo List</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      color: #333;
-    }
-  .header {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-    .current-date,
-    .current-time {
-      font-weight: bold;
-    }
-    .year-select {
-      margin-bottom: 10px;
-    }
-    .month-boxes {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .month-boxes .month-box {
-      width: 100px;
-      height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #f2f2f2;
-      margin: 5px;
-      cursor: pointer;
-    }
-    .day-picker {
-      /* position: fixed;
-      top: 50%;
-      left: 50%; */
-      display: flex;
-      justify-content: space-around;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      background-color: #dedede;
-      margin: 20px;
-      border-radius:15px;
-    }
-    .day-picker .day {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-      text-align: center;
-      margin: 5px;
-      padding: 12px;
-      background-color: #fff;
-      cursor: pointer;
-    }
-    #all-tasks{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      text-align: left;
-    }
-    .listH{
-      padding-inline: 20px;
-    }
-  </style>
-</head>
-<body>
-  <div class="header">
-    <div><p>Today : </p><div class="current-date" id="current-date"></div></div>
-    <div><p>Now : </p><div class="current-time" id="current-time"></div></div>
-  </div>
-  <h1>Todo List</h1>
-
-  <div class="year-select">
-    <select id="year-select"></select>
-  </div>
-<script src="./home.js"></script>
-  <div class="month-boxes" id="month-boxes"></div>
-
-  <div class="day-picker" id="day-picker"></div>
-  <div id="all-tasks"></div>
-  <script src="./script.js"></script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
