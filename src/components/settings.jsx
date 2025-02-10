@@ -18,7 +18,7 @@ const Settings = ({ kanbanColumns, setKanbanColumns }) => {
   };
 
   return (
-    <div className="absolute top-0 right-0 w-1/4 bg-white dark:bg-gray-800 dark:text-white p-6 shadow-lg rounded-lg z-50">
+    <div className="absolute top-0 right-0 w-1/4 bg-white dark:bg-gray-900 border-gray-100 border dark:text-white p-6 shadow-lg rounded-lg z-50">
       <h3 className="text-lg font-bold mb-4">Settings</h3>
       <div className="mb-4">
         <h4 className="font-semibold mb-2">Kanban Columns:</h4>

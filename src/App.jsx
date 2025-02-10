@@ -120,15 +120,10 @@ const App = () => {
     };
   }, []);
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    localStorage.setItem('darkMode', !darkMode);
-  };
-
   return (
-    <div className={darkMode ? 'dark' : ''}>
+    <div>
       <div className="min-h-screen bg-gray-100 dark:bg-gray-900 p-8">
-        <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 dark:text-white shadow-lg rounded-lg p-6 relative">
+        <div className="max-w-7xl mx-auto bg-white dark:bg-gray-800 dark:text-white shadow-lg rounded-lg p-6 relative">
           <h1 className="text-2xl font-bold mb-4 text-center">Todo List</h1>
 
           <div className="flex justify-between">
@@ -137,12 +132,6 @@ const App = () => {
               className="text-gray-600 dark:text-gray-300"
             >
               ⚙️
-            </button>
-            <button
-              onClick={toggleDarkMode}
-              className="text-gray-600 dark:text-gray-300"
-            >
-              {darkMode ? '🌞' : '🌙'}
             </button>
           </div>
 
